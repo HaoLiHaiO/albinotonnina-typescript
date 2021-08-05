@@ -4,8 +4,15 @@ import Scene from "./scene";
 import Subtitles from "./subtitles";
 import "./styles/main.css";
 
-function throttle(func, wait, immediate) {
-  let timeout;
+interface throttleProps {
+  func: () => void;
+  wait: number;
+  immediate: boolean;
+}
+
+function throttle({ func, wait, immediate }: throttleProps) {
+  // eslint-disable-next-line no-undef
+  let timeout: number | NodeJS.Timeout | null;
   return (...args) => {
     const context = this;
     const later = () => {

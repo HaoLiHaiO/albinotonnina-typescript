@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import { resolve } from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StringReplacePlugin from "string-replace-webpack-plugin";
@@ -22,6 +23,7 @@ export default (_, { analyze }) => {
       hot: true,
     },
     resolve: {
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
       alias: {
         "react-dom$": "react-dom/profiling",
         "scheduler/tracing": "scheduler/tracing-profiling",

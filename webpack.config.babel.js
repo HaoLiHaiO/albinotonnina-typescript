@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import { resolve } from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import StringReplacePlugin from "string-replace-webpack-plugin";

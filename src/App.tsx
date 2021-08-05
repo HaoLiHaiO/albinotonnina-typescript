@@ -4,7 +4,7 @@ import Scene from "./scene";
 import Subtitles from "./subtitles";
 import "./styles/main.css";
 
-function throttle(func, wait, immediate) {
+function throttle(func, wait: number, immediate) {
   let timeout;
   return (...args) => {
     const context = this;

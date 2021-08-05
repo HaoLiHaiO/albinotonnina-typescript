@@ -22,6 +22,7 @@ export default (_, { analyze }) => {
       hot: true,
     },
     resolve: {
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
       alias: {
         "react-dom$": "react-dom/profiling",
         "scheduler/tracing": "scheduler/tracing-profiling",
